@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		B66282C92A33701E005EF9F8 /* Core in Resources */ = {isa = PBXBuildFile; fileRef = B66282C82A33701D005EF9F8 /* Core */; };
 		B66282CB2A337027005EF9F8 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = B66282CA2A337027005EF9F8 /* Core */; };
+		B678912C2A3375F9004C6410 /* Features in Frameworks */ = {isa = PBXBuildFile; productRef = B678912B2A3375F9004C6410 /* Features */; };
 		B6C62F932A3352CA00735188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62F922A3352CA00735188 /* AppDelegate.swift */; };
 		B6C62F952A3352CA00735188 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62F942A3352CA00735188 /* SceneDelegate.swift */; };
 		B6C62F972A3352CA00735188 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62F962A3352CA00735188 /* ViewController.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		B66282C82A33701D005EF9F8 /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Core; sourceTree = "<group>"; };
+		B678912A2A3375C8004C6410 /* Features */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Features; sourceTree = "<group>"; };
 		B6C62F8F2A3352CA00735188 /* Brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brownie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C62F922A3352CA00735188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6C62F942A3352CA00735188 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B678912C2A3375F9004C6410 /* Features in Frameworks */,
 				B6C62FC42A335F1500735188 /* NeedleFoundation in Frameworks */,
 				B66282CB2A337027005EF9F8 /* Core in Frameworks */,
 			);
@@ -103,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				B66282C82A33701D005EF9F8 /* Core */,
+				B678912A2A3375C8004C6410 /* Features */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -192,6 +196,7 @@
 			packageProductDependencies = (
 				B6C62FC32A335F1500735188 /* NeedleFoundation */,
 				B66282CA2A337027005EF9F8 /* Core */,
+				B678912B2A3375F9004C6410 /* Features */,
 			);
 			productName = Brownie;
 			productReference = B6C62F8F2A3352CA00735188 /* Brownie.app */;
@@ -696,6 +701,10 @@
 		B66282CA2A337027005EF9F8 /* Core */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Core;
+		};
+		B678912B2A3375F9004C6410 /* Features */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Features;
 		};
 		B6C62FC32A335F1500735188 /* NeedleFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
