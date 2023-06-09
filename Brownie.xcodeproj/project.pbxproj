@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B66282C92A33701E005EF9F8 /* Core in Resources */ = {isa = PBXBuildFile; fileRef = B66282C82A33701D005EF9F8 /* Core */; };
+		B66282CB2A337027005EF9F8 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = B66282CA2A337027005EF9F8 /* Core */; };
 		B6C62F932A3352CA00735188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62F922A3352CA00735188 /* AppDelegate.swift */; };
 		B6C62F952A3352CA00735188 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62F942A3352CA00735188 /* SceneDelegate.swift */; };
 		B6C62F972A3352CA00735188 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62F962A3352CA00735188 /* ViewController.swift */; };
@@ -39,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B66282C82A33701D005EF9F8 /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Core; sourceTree = "<group>"; };
 		B6C62F8F2A3352CA00735188 /* Brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brownie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C62F922A3352CA00735188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6C62F942A3352CA00735188 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -62,6 +65,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C62FC42A335F1500735188 /* NeedleFoundation in Frameworks */,
+				B66282CB2A337027005EF9F8 /* Core in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,9 +99,18 @@
 			path = App;
 			sourceTree = "<group>";
 		};
+		B66282C72A33701D005EF9F8 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				B66282C82A33701D005EF9F8 /* Core */,
+			);
+			path = Packages;
+			sourceTree = "<group>";
+		};
 		B6C62F862A3352CA00735188 = {
 			isa = PBXGroup;
 			children = (
+				B66282C72A33701D005EF9F8 /* Packages */,
 				B6C62F912A3352CA00735188 /* Brownie */,
 				B6C62FA82A3352CB00735188 /* BrownieTests */,
 				B6C62FB22A3352CB00735188 /* BrownieUITests */,
@@ -178,6 +191,7 @@
 			name = Brownie;
 			packageProductDependencies = (
 				B6C62FC32A335F1500735188 /* NeedleFoundation */,
+				B66282CA2A337027005EF9F8 /* Core */,
 			);
 			productName = Brownie;
 			productReference = B6C62F8F2A3352CA00735188 /* Brownie.app */;
@@ -271,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B6C62F9F2A3352CB00735188 /* LaunchScreen.storyboard in Resources */,
+				B66282C92A33701E005EF9F8 /* Core in Resources */,
 				B6C62F9C2A3352CB00735188 /* Assets.xcassets in Resources */,
 				B6C62F9A2A3352CA00735188 /* Main.storyboard in Resources */,
 			);
@@ -678,6 +693,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		B66282CA2A337027005EF9F8 /* Core */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Core;
+		};
 		B6C62FC32A335F1500735188 /* NeedleFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B6C62FC22A335F1500735188 /* XCRemoteSwiftPackageReference "needle" */;
