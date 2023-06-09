@@ -295,6 +295,7 @@
 /* Begin PBXShellScriptBuildPhase section */
 		B6C62FC52A335FCB00735188 /* Run needle */ = {
 			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
 			buildActionMask = 2147483647;
 			files = (
 			);
