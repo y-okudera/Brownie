@@ -16,6 +16,9 @@
 		B6C62FAA2A3352CB00735188 /* BrownieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62FA92A3352CB00735188 /* BrownieTests.swift */; };
 		B6C62FB42A3352CB00735188 /* BrownieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62FB32A3352CB00735188 /* BrownieUITests.swift */; };
 		B6C62FB62A3352CB00735188 /* BrownieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62FB52A3352CB00735188 /* BrownieUITestsLaunchTests.swift */; };
+		B6C62FC42A335F1500735188 /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = B6C62FC32A335F1500735188 /* NeedleFoundation */; };
+		B6C62FC72A3360BF00735188 /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62FC62A3360BF00735188 /* NeedleGenerated.swift */; };
+		B6C62FC92A33615000735188 /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62FC82A33615000735188 /* RootComponent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,8 @@
 		B6C62FAF2A3352CB00735188 /* BrownieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BrownieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C62FB32A3352CB00735188 /* BrownieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownieUITests.swift; sourceTree = "<group>"; };
 		B6C62FB52A3352CB00735188 /* BrownieUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrownieUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		B6C62FC62A3360BF00735188 /* NeedleGenerated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeedleGenerated.swift; sourceTree = "<group>"; };
+		B6C62FC82A33615000735188 /* RootComponent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootComponent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C62FC42A335F1500735188 /* NeedleFoundation in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +82,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B66282C62A336D0C005EF9F8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				B6C62F922A3352CA00735188 /* AppDelegate.swift */,
+				B6C62F9B2A3352CB00735188 /* Assets.xcassets */,
+				B6C62FA02A3352CB00735188 /* Info.plist */,
+				B6C62F9D2A3352CB00735188 /* LaunchScreen.storyboard */,
+				B6C62FC82A33615000735188 /* RootComponent.swift */,
+				B6C62F942A3352CA00735188 /* SceneDelegate.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		B6C62F862A3352CA00735188 = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +102,7 @@
 				B6C62FA82A3352CB00735188 /* BrownieTests */,
 				B6C62FB22A3352CB00735188 /* BrownieUITests */,
 				B6C62F902A3352CA00735188 /* Products */,
+				B6C62FD02A336A1500735188 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +119,10 @@
 		B6C62F912A3352CA00735188 /* Brownie */ = {
 			isa = PBXGroup;
 			children = (
-				B6C62F922A3352CA00735188 /* AppDelegate.swift */,
-				B6C62F942A3352CA00735188 /* SceneDelegate.swift */,
-				B6C62F962A3352CA00735188 /* ViewController.swift */,
+				B66282C62A336D0C005EF9F8 /* App */,
+				B6C62FCA2A33632E00735188 /* Generated */,
 				B6C62F982A3352CA00735188 /* Main.storyboard */,
-				B6C62F9B2A3352CB00735188 /* Assets.xcassets */,
-				B6C62F9D2A3352CB00735188 /* LaunchScreen.storyboard */,
-				B6C62FA02A3352CB00735188 /* Info.plist */,
+				B6C62F962A3352CA00735188 /* ViewController.swift */,
 			);
 			path = Brownie;
 			sourceTree = "<group>";
@@ -127,6 +144,21 @@
 			path = BrownieUITests;
 			sourceTree = "<group>";
 		};
+		B6C62FCA2A33632E00735188 /* Generated */ = {
+			isa = PBXGroup;
+			children = (
+				B6C62FC62A3360BF00735188 /* NeedleGenerated.swift */,
+			);
+			path = Generated;
+			sourceTree = "<group>";
+		};
+		B6C62FD02A336A1500735188 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,6 +166,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B6C62FB92A3352CB00735188 /* Build configuration list for PBXNativeTarget "Brownie" */;
 			buildPhases = (
+				B6C62FC52A335FCB00735188 /* Run needle */,
 				B6C62F8B2A3352CA00735188 /* Sources */,
 				B6C62F8C2A3352CA00735188 /* Frameworks */,
 				B6C62F8D2A3352CA00735188 /* Resources */,
@@ -143,6 +176,9 @@
 			dependencies = (
 			);
 			name = Brownie;
+			packageProductDependencies = (
+				B6C62FC32A335F1500735188 /* NeedleFoundation */,
+			);
 			productName = Brownie;
 			productReference = B6C62F8F2A3352CA00735188 /* Brownie.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +251,9 @@
 				Base,
 			);
 			mainGroup = B6C62F862A3352CA00735188;
+			packageReferences = (
+				B6C62FC22A335F1500735188 /* XCRemoteSwiftPackageReference "needle" */,
+			);
 			productRefGroup = B6C62F902A3352CA00735188 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -253,13 +292,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B6C62FC52A335FCB00735188 /* Run needle */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run needle";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# 以下の部分はAppleシリコンのMacで必要になります。\nif [ $(uname -m) = \"arm64\" ]; then\n  export PATH=\"/opt/homebrew/bin:/opt/homebrew/sbin:${PATH+:$PATH}\";\nfi\n\nexport SOURCEKIT_LOGGING=0 && needle generate $SRCROOT/Brownie/Generated/NeedleGenerated.swift Brownie\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B6C62F8B2A3352CA00735188 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B6C62FC72A3360BF00735188 /* NeedleGenerated.swift in Sources */,
 				B6C62F972A3352CA00735188 /* ViewController.swift in Sources */,
 				B6C62F932A3352CA00735188 /* AppDelegate.swift in Sources */,
+				B6C62FC92A33615000735188 /* RootComponent.swift in Sources */,
 				B6C62F952A3352CA00735188 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,7 +501,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Brownie/Info.plist;
+				INFOPLIST_FILE = Brownie/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -467,7 +529,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = B8PR34D6DP;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = Brownie/Info.plist;
+				INFOPLIST_FILE = Brownie/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -602,6 +664,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B6C62FC22A335F1500735188 /* XCRemoteSwiftPackageReference "needle" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/uber/needle.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B6C62FC32A335F1500735188 /* NeedleFoundation */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B6C62FC22A335F1500735188 /* XCRemoteSwiftPackageReference "needle" */;
+			productName = NeedleFoundation;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B6C62F872A3352CA00735188 /* Project object */;
 }
