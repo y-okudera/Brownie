@@ -5,6 +5,7 @@
 //  Created by Yuki Okudera on 2023/06/09.
 //
 
+import Core
 import QiitaSearch
 import UIKit
 
@@ -20,8 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let window = UIWindow(windowScene: windowScene)
         self.window = window
         window.makeKeyAndVisible()
-        
-        let vc = QiitaSearchViewBuilder.build()
+        let vc = (UIApplication.shared.delegate as! AppDelegate).rootComponent.qiitaSearchComponent.qiitaSearchBuilder().makeViewController()
         window.rootViewController = UINavigationController(rootViewController: vc)
     }
 

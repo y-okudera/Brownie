@@ -7,10 +7,12 @@
 
 import Foundation
 
-actor QiitaSearchViewData: ObservableObject {
+public actor QiitaSearchViewData: ObservableObject {
 
     @MainActor @Published private(set) var title: String = ""
     @MainActor @Published private(set) var dataList: [String] = []
+
+    public init() {}
 
     func updateTitle(title: String) async {
         await MainActor.run {

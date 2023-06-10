@@ -8,4 +8,4 @@ setup: ## setup
 
 .PHONY: di
 di: ## di
-	export SOURCEKIT_LOGGING=0 && needle generate ./Brownie/Generated/NeedleGenerated.swift Brownie
+	export SOURCEKIT_LOGGING=0 && needle generate ./Brownie/Generated/NeedleGenerated.swift Brownie Packages

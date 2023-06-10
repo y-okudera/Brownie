@@ -7,20 +7,20 @@
 
 import Foundation
 
-protocol QiitaSearchPresenterInput {
+public protocol QiitaSearchPresenterInput {
     var viewData: QiitaSearchViewData { get }
     func onAppear() async
 }
 
-final class QiitaSearchPresenter: QiitaSearchPresenterInput {
+public final class QiitaSearchPresenter: QiitaSearchPresenterInput {
 
-    let viewData: QiitaSearchViewData
+    public let viewData: QiitaSearchViewData
 
-    init(viewData: QiitaSearchViewData) {
+    public init(viewData: QiitaSearchViewData) {
         self.viewData = viewData
     }
 
-    func onAppear() async {
+    public func onAppear() async {
         await self.viewData.updateDataList(dataList: ["1", "2", "3"])
         await self.viewData.updateTitle(title: "QiitaSearch")
     }
