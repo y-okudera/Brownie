@@ -41,6 +41,12 @@ struct QiitaSearchScreenView: View {
 
 struct QiitaSearchScreenView_Previews: PreviewProvider {
     static var previews: some View {
-        QiitaSearchScreenView(presenter: QiitaSearchPresenter(viewData: .init()), viewData: .init())
+        QiitaSearchScreenView(
+            presenter: QiitaSearchPresenter(
+                viewData: .init(),
+                searchItemsUseCase: <#SearchItemsUseCase#>
+            ),
+            viewData: .init()
+        )
     }
 }

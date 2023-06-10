@@ -17,15 +17,16 @@ let package = Package(
         ),
     ],
     dependencies: [
-        .package(name: "Core", path: "../Core"),
+        .package(name: "ApplicationInterface", path: "../ApplicationInterface"),
+        .package(name: "PresentationInterface", path: "../PresentationInterface"),
         .package(url: "https://github.com/uber/needle.git", branch: "master"),
     ],
     targets: [
         .target(
             name: "QiitaSearch",
             dependencies: [
-                "PresentationCore",
-                .product(name: "Core", package: "Core"),
+                .product(name: "ApplicationInterface", package: "ApplicationInterface"),
+                .product(name: "PresentationInterface", package: "PresentationInterface"),
                 .product(name: "NeedleFoundation", package: "needle"),
             ]
         ),
@@ -34,10 +35,6 @@ let package = Package(
             dependencies: [
                 "QiitaSearch",
             ]
-        ),
-        .target(
-            name: "PresentationCore",
-            dependencies: []
         )
     ]
 )

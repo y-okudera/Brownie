@@ -8,8 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B6AF9CD42A3403ED0096A8B6 /* UINavigationBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AF9CD32A3403ED0096A8B6 /* UINavigationBar+.swift */; };
-		B6AF9CDD2A345F6B0096A8B6 /* Core in Frameworks */ = {isa = PBXBuildFile; productRef = B6AF9CDC2A345F6B0096A8B6 /* Core */; };
-		B6AF9CE32A345F6B0096A8B6 /* QiitaSearch in Frameworks */ = {isa = PBXBuildFile; productRef = B6AF9CE22A345F6B0096A8B6 /* QiitaSearch */; };
+		B6C431DE2A34CF74008F1677 /* SearchItemsUseCase in Frameworks */ = {isa = PBXBuildFile; productRef = B6C431DD2A34CF74008F1677 /* SearchItemsUseCase */; };
+		B6C431E02A34CF74008F1677 /* ApplicationInterface in Frameworks */ = {isa = PBXBuildFile; productRef = B6C431DF2A34CF74008F1677 /* ApplicationInterface */; };
+		B6C431E22A34CF74008F1677 /* Entity in Frameworks */ = {isa = PBXBuildFile; productRef = B6C431E12A34CF74008F1677 /* Entity */; };
+		B6C431E42A34CF74008F1677 /* ItemsApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = B6C431E32A34CF74008F1677 /* ItemsApiClient */; };
+		B6C431E62A34CF74008F1677 /* InfrastructureInterface in Frameworks */ = {isa = PBXBuildFile; productRef = B6C431E52A34CF74008F1677 /* InfrastructureInterface */; };
+		B6C431E82A34CF74008F1677 /* QiitaSearch in Frameworks */ = {isa = PBXBuildFile; productRef = B6C431E72A34CF74008F1677 /* QiitaSearch */; };
+		B6C431EA2A34CF74008F1677 /* PresentationInterface in Frameworks */ = {isa = PBXBuildFile; productRef = B6C431E92A34CF74008F1677 /* PresentationInterface */; };
+		B6C431EC2A34CF74008F1677 /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = B6C431EB2A34CF74008F1677 /* NeedleFoundation */; };
 		B6C62F932A3352CA00735188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62F922A3352CA00735188 /* AppDelegate.swift */; };
 		B6C62F952A3352CA00735188 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62F942A3352CA00735188 /* SceneDelegate.swift */; };
 		B6C62F9C2A3352CB00735188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C62F9B2A3352CB00735188 /* Assets.xcassets */; };
@@ -17,7 +23,6 @@
 		B6C62FAA2A3352CB00735188 /* BrownieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62FA92A3352CB00735188 /* BrownieTests.swift */; };
 		B6C62FB42A3352CB00735188 /* BrownieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62FB32A3352CB00735188 /* BrownieUITests.swift */; };
 		B6C62FB62A3352CB00735188 /* BrownieUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62FB52A3352CB00735188 /* BrownieUITestsLaunchTests.swift */; };
-		B6C62FC42A335F1500735188 /* NeedleFoundation in Frameworks */ = {isa = PBXBuildFile; productRef = B6C62FC32A335F1500735188 /* NeedleFoundation */; };
 		B6C62FC72A3360BF00735188 /* NeedleGenerated.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62FC62A3360BF00735188 /* NeedleGenerated.swift */; };
 		B6C62FC92A33615000735188 /* RootComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62FC82A33615000735188 /* RootComponent.swift */; };
 /* End PBXBuildFile section */
@@ -40,9 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B678912F2A338F5F004C6410 /* Presentation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Presentation; sourceTree = "<group>"; };
 		B6AF9CD32A3403ED0096A8B6 /* UINavigationBar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+.swift"; sourceTree = "<group>"; };
-		B6AF9CD82A343A200096A8B6 /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Core; sourceTree = "<group>"; };
+		B6C431D62A34CF4D008F1677 /* Application */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Application; sourceTree = "<group>"; };
+		B6C431D72A34CF4D008F1677 /* ApplicationInterface */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ApplicationInterface; sourceTree = "<group>"; };
+		B6C431D82A34CF4D008F1677 /* InfrastructureInterface */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = InfrastructureInterface; sourceTree = "<group>"; };
+		B6C431D92A34CF4D008F1677 /* Presentation */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Presentation; sourceTree = "<group>"; };
+		B6C431DA2A34CF4D008F1677 /* PresentationInterface */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = PresentationInterface; sourceTree = "<group>"; };
+		B6C431DB2A34CF4D008F1677 /* Entity */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Entity; sourceTree = "<group>"; };
+		B6C431DC2A34CF4D008F1677 /* Infrastructure */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Infrastructure; sourceTree = "<group>"; };
 		B6C62F8F2A3352CA00735188 /* Brownie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Brownie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6C62F922A3352CA00735188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B6C62F942A3352CA00735188 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,9 +73,14 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6C62FC42A335F1500735188 /* NeedleFoundation in Frameworks */,
-				B6AF9CDD2A345F6B0096A8B6 /* Core in Frameworks */,
-				B6AF9CE32A345F6B0096A8B6 /* QiitaSearch in Frameworks */,
+				B6C431DE2A34CF74008F1677 /* SearchItemsUseCase in Frameworks */,
+				B6C431E62A34CF74008F1677 /* InfrastructureInterface in Frameworks */,
+				B6C431E42A34CF74008F1677 /* ItemsApiClient in Frameworks */,
+				B6C431E22A34CF74008F1677 /* Entity in Frameworks */,
+				B6C431EC2A34CF74008F1677 /* NeedleFoundation in Frameworks */,
+				B6C431E02A34CF74008F1677 /* ApplicationInterface in Frameworks */,
+				B6C431EA2A34CF74008F1677 /* PresentationInterface in Frameworks */,
+				B6C431E82A34CF74008F1677 /* QiitaSearch in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,8 +117,13 @@
 		B66282C72A33701D005EF9F8 /* Packages */ = {
 			isa = PBXGroup;
 			children = (
-				B6AF9CD82A343A200096A8B6 /* Core */,
-				B678912F2A338F5F004C6410 /* Presentation */,
+				B6C431D62A34CF4D008F1677 /* Application */,
+				B6C431D72A34CF4D008F1677 /* ApplicationInterface */,
+				B6C431DB2A34CF4D008F1677 /* Entity */,
+				B6C431DC2A34CF4D008F1677 /* Infrastructure */,
+				B6C431D82A34CF4D008F1677 /* InfrastructureInterface */,
+				B6C431D92A34CF4D008F1677 /* Presentation */,
+				B6C431DA2A34CF4D008F1677 /* PresentationInterface */,
 			);
 			path = Packages;
 			sourceTree = "<group>";
@@ -198,9 +218,14 @@
 			);
 			name = Brownie;
 			packageProductDependencies = (
-				B6C62FC32A335F1500735188 /* NeedleFoundation */,
-				B6AF9CDC2A345F6B0096A8B6 /* Core */,
-				B6AF9CE22A345F6B0096A8B6 /* QiitaSearch */,
+				B6C431DD2A34CF74008F1677 /* SearchItemsUseCase */,
+				B6C431DF2A34CF74008F1677 /* ApplicationInterface */,
+				B6C431E12A34CF74008F1677 /* Entity */,
+				B6C431E32A34CF74008F1677 /* ItemsApiClient */,
+				B6C431E52A34CF74008F1677 /* InfrastructureInterface */,
+				B6C431E72A34CF74008F1677 /* QiitaSearch */,
+				B6C431E92A34CF74008F1677 /* PresentationInterface */,
+				B6C431EB2A34CF74008F1677 /* NeedleFoundation */,
 			);
 			productName = Brownie;
 			productReference = B6C62F8F2A3352CA00735188 /* Brownie.app */;
@@ -690,15 +715,35 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B6AF9CDC2A345F6B0096A8B6 /* Core */ = {
+		B6C431DD2A34CF74008F1677 /* SearchItemsUseCase */ = {
 			isa = XCSwiftPackageProductDependency;
-			productName = Core;
+			productName = SearchItemsUseCase;
 		};
-		B6AF9CE22A345F6B0096A8B6 /* QiitaSearch */ = {
+		B6C431DF2A34CF74008F1677 /* ApplicationInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ApplicationInterface;
+		};
+		B6C431E12A34CF74008F1677 /* Entity */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Entity;
+		};
+		B6C431E32A34CF74008F1677 /* ItemsApiClient */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ItemsApiClient;
+		};
+		B6C431E52A34CF74008F1677 /* InfrastructureInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = InfrastructureInterface;
+		};
+		B6C431E72A34CF74008F1677 /* QiitaSearch */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = QiitaSearch;
 		};
-		B6C62FC32A335F1500735188 /* NeedleFoundation */ = {
+		B6C431E92A34CF74008F1677 /* PresentationInterface */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PresentationInterface;
+		};
+		B6C431EB2A34CF74008F1677 /* NeedleFoundation */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B6C62FC22A335F1500735188 /* XCRemoteSwiftPackageReference "needle" */;
 			productName = NeedleFoundation;

@@ -5,6 +5,7 @@
 //  Created by Yuki Okudera on 2023/06/10.
 //
 
+import ApplicationInterface
 import Foundation
 
 public protocol QiitaSearchPresenterInput {
@@ -16,8 +17,11 @@ public final class QiitaSearchPresenter: QiitaSearchPresenterInput {
 
     public let viewData: QiitaSearchViewData
 
-    public init(viewData: QiitaSearchViewData) {
+    public let searchItemsUseCase: SearchItemsUseCase
+
+    public init(viewData: QiitaSearchViewData, searchItemsUseCase: SearchItemsUseCase) {
         self.viewData = viewData
+        self.searchItemsUseCase = searchItemsUseCase
     }
 
     public func onAppear() async {

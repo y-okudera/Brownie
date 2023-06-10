@@ -5,7 +5,7 @@
 //  Created by Yuki Okudera on 2023/06/10.
 //
 
-import PresentationCore
+import PresentationInterface
 import UIKit
 
 final class QiitaSearchViewController: UIViewController {
