@@ -1,5 +1,5 @@
 //
-//  ApplicationInterfaceTests.swift
+//  BuildableTests.swift
 //  
 //
 //  Created by Yuki Okudera on 2023/06/11.
@@ -7,7 +7,7 @@
 
 import XCTest
 
-final class ApplicationInterfaceTests: XCTestCase {
+final class BuildableTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

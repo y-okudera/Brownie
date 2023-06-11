@@ -6,15 +6,12 @@
 //
 
 import ApplicationInterface
-import InfrastructureInterface
-import NeedleFoundation
 import Buildable
+import NeedleFoundation
+import InfrastructureInterface
 
-final class SearchItemsUseCaseBuilder: Builder<SearchItemsUseCaseDependency>, SearchItemsUseCaseBuildable {
-
-    func makeUseCase(itemsApiRepository: ItemsApiRepository) -> SearchItemsUseCase {
-        return SearchItemsInteractor(repository: dependency.itemsApiRepository)
-    }
+public protocol SearchItemsUseCaseDependency: Dependency {
+    var itemsApiRepository: ItemsApiRepository { get }
 }
 
 public final class SearchItemsUseCaseComponent: Component<SearchItemsUseCaseDependency>, SearchItemsUseCaseBuilderProvider {
@@ -24,6 +21,9 @@ public final class SearchItemsUseCaseComponent: Component<SearchItemsUseCaseDepe
     }
 }
 
-public protocol SearchItemsUseCaseDependency: Dependency {
-    var itemsApiRepository: ItemsApiRepository { get }
+private final class SearchItemsUseCaseBuilder: Builder<SearchItemsUseCaseDependency>, SearchItemsUseCaseBuildable {
+
+    func makeUseCase(itemsApiRepository: ItemsApiRepository) -> SearchItemsUseCase {
+        return SearchItemsInteractor(repository: dependency.itemsApiRepository)
+    }
 }

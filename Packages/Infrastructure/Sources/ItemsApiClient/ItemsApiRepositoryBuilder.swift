@@ -9,16 +9,16 @@ import NeedleFoundation
 import Buildable
 import InfrastructureInterface
 
-final class ItemsApiRepositoryBuilder: Builder<EmptyDependency>, ItemsApiRepositoryBuildable {
-
-    func makeRepository() -> ItemsApiRepository {
-        return ItemsApiClient()
-    }
-}
-
 public final class ItemsApiRepositoryComponent: Component<EmptyDependency>, ItemsApiRepositoryBuilderProvider {
 
     public func itemsApiRepositoryBuilder() -> ItemsApiRepositoryBuildable {
         return ItemsApiRepositoryBuilder(dependency: dependency)
+    }
+}
+
+private final class ItemsApiRepositoryBuilder: Builder<EmptyDependency>, ItemsApiRepositoryBuildable {
+
+    func makeRepository() -> ItemsApiRepository {
+        return ItemsApiClient()
     }
 }

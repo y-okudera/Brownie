@@ -16,7 +16,7 @@ final class QiitaSearchViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setHostingController(
+        self.ex.setHostingController(
             swiftUIView: QiitaSearchScreenView(
                 delegate: self,
                 presenter: presenter,

@@ -6,7 +6,6 @@
 //
 
 import Buildable
-import Foundation
 
 public protocol ItemsApiRepositoryBuildable: Buildable {
     func makeRepository() -> ItemsApiRepository

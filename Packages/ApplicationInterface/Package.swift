@@ -15,7 +15,7 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "Entity", path: "../Entity"),
-        .package(name: "Buildable", path: "../Buildable"),
+        .package(name: "Core", path: "../Core"),
         .package(name: "InfrastructureInterface", path: "../InfrastructureInterface"),
     ],
     targets: [
@@ -23,7 +23,7 @@ let package = Package(
             name: "ApplicationInterface",
             dependencies: [
                 .product(name: "Entity", package: "Entity"),
-                .product(name: "Buildable", package: "Buildable"),
+                .product(name: "Buildable", package: "Core"),
                 .product(name: "InfrastructureInterface", package: "InfrastructureInterface"),
             ]
         ),

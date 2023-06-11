@@ -6,7 +6,6 @@
 //
 
 import Buildable
-import Foundation
 import InfrastructureInterface
 
 public protocol SearchItemsUseCaseBuildable: Buildable {

@@ -8,7 +8,6 @@
 import ApplicationInterface
 import Entity
 import InfrastructureInterface
-import Foundation
 
 public struct SearchItemsInteractor: SearchItemsUseCase {
 

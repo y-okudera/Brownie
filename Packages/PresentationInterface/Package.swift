@@ -14,13 +14,13 @@ let package = Package(
             targets: ["PresentationInterface"]),
     ],
     dependencies: [
-        .package(name: "Buildable", path: "../Buildable"),
+        .package(name: "Core", path: "../Core"),
     ],
     targets: [
         .target(
             name: "PresentationInterface",
             dependencies: [
-                .product(name: "Buildable", package: "Buildable"),
+                .product(name: "Buildable", package: "Core"),
             ]
         ),
         .testTarget(

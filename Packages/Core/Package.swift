@@ -4,14 +4,19 @@
 import PackageDescription
 
 let package = Package(
-    name: "Buildable",
+    name: "Core",
     platforms: [
         .iOS(.v15),
     ],
     products: [
         .library(
             name: "Buildable",
-            targets: ["Buildable"]),
+            targets: ["Buildable"]
+        ),
+        .library(
+            name: "ExtensionCompatible",
+            targets: ["ExtensionCompatible"]
+        ),
     ],
     dependencies: [
         .package(url: "https://github.com/uber/needle.git", branch: "master"),
@@ -25,6 +30,19 @@ let package = Package(
         ),
         .testTarget(
             name: "BuildableTests",
-            dependencies: ["Buildable"]),
+            dependencies: [
+                "Buildable",
+            ]
+        ),
+        .target(
+            name: "ExtensionCompatible",
+            dependencies: []
+        ),
+        .testTarget(
+            name: "ExtensionCompatibleTests",
+            dependencies: [
+                "ExtensionCompatible",
+            ]
+        )
     ]
 )
