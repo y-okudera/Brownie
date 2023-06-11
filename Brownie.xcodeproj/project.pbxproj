@@ -8,15 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		B6AF9CD42A3403ED0096A8B6 /* UINavigationBar+.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6AF9CD32A3403ED0096A8B6 /* UINavigationBar+.swift */; };
-		B6B260D32A35CFAB0029368E /* SearchItemsInteractor in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260D22A35CFAB0029368E /* SearchItemsInteractor */; };
-		B6B260D52A35CFAB0029368E /* ApplicationInterface in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260D42A35CFAB0029368E /* ApplicationInterface */; };
-		B6B260D72A35CFAB0029368E /* Buildable in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260D62A35CFAB0029368E /* Buildable */; };
-		B6B260D92A35CFAB0029368E /* ExtensionCompatible in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260D82A35CFAB0029368E /* ExtensionCompatible */; };
-		B6B260DB2A35CFAB0029368E /* Entity in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260DA2A35CFAB0029368E /* Entity */; };
-		B6B260DD2A35CFAB0029368E /* ItemsApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260DC2A35CFAB0029368E /* ItemsApiClient */; };
-		B6B260DF2A35CFAB0029368E /* InfrastructureInterface in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260DE2A35CFAB0029368E /* InfrastructureInterface */; };
-		B6B260E12A35CFAB0029368E /* QiitaSearchScreen in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260E02A35CFAB0029368E /* QiitaSearchScreen */; };
-		B6B260E32A35CFAB0029368E /* PresentationInterface in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260E22A35CFAB0029368E /* PresentationInterface */; };
+		B6B260E62A3618720029368E /* SearchItemsInteractor in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260E52A3618720029368E /* SearchItemsInteractor */; };
+		B6B260E82A3618720029368E /* ApplicationInterface in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260E72A3618720029368E /* ApplicationInterface */; };
+		B6B260EA2A3618720029368E /* Buildable in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260E92A3618720029368E /* Buildable */; };
+		B6B260EC2A3618720029368E /* ExtensionCompatible in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260EB2A3618720029368E /* ExtensionCompatible */; };
+		B6B260EE2A3618720029368E /* DesignSystem in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260ED2A3618720029368E /* DesignSystem */; };
+		B6B260F02A3618720029368E /* Entity in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260EF2A3618720029368E /* Entity */; };
+		B6B260F22A3618720029368E /* ItemsApiClient in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260F12A3618720029368E /* ItemsApiClient */; };
+		B6B260F42A3618720029368E /* InfrastructureInterface in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260F32A3618720029368E /* InfrastructureInterface */; };
+		B6B260F62A3618720029368E /* QiitaSearchScreen in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260F52A3618720029368E /* QiitaSearchScreen */; };
+		B6B260F82A3618720029368E /* PresentationInterface in Frameworks */ = {isa = PBXBuildFile; productRef = B6B260F72A3618720029368E /* PresentationInterface */; };
 		B6C62F932A3352CA00735188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62F922A3352CA00735188 /* AppDelegate.swift */; };
 		B6C62F952A3352CA00735188 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6C62F942A3352CA00735188 /* SceneDelegate.swift */; };
 		B6C62F9C2A3352CB00735188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B6C62F9B2A3352CB00735188 /* Assets.xcassets */; };
@@ -48,6 +49,7 @@
 /* Begin PBXFileReference section */
 		B6AF9CD32A3403ED0096A8B6 /* UINavigationBar+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+.swift"; sourceTree = "<group>"; };
 		B6B260BF2A35CC490029368E /* Core */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Core; sourceTree = "<group>"; };
+		B6B260E42A3608E60029368E /* DesignSystem */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = DesignSystem; sourceTree = "<group>"; };
 		B6C431D62A34CF4D008F1677 /* Application */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = Application; sourceTree = "<group>"; };
 		B6C431D72A34CF4D008F1677 /* ApplicationInterface */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ApplicationInterface; sourceTree = "<group>"; };
 		B6C431D82A34CF4D008F1677 /* InfrastructureInterface */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = InfrastructureInterface; sourceTree = "<group>"; };
@@ -75,15 +77,16 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B6B260DB2A35CFAB0029368E /* Entity in Frameworks */,
-				B6B260E32A35CFAB0029368E /* PresentationInterface in Frameworks */,
-				B6B260DF2A35CFAB0029368E /* InfrastructureInterface in Frameworks */,
-				B6B260D92A35CFAB0029368E /* ExtensionCompatible in Frameworks */,
-				B6B260D72A35CFAB0029368E /* Buildable in Frameworks */,
-				B6B260DD2A35CFAB0029368E /* ItemsApiClient in Frameworks */,
-				B6B260D32A35CFAB0029368E /* SearchItemsInteractor in Frameworks */,
-				B6B260D52A35CFAB0029368E /* ApplicationInterface in Frameworks */,
-				B6B260E12A35CFAB0029368E /* QiitaSearchScreen in Frameworks */,
+				B6B260EE2A3618720029368E /* DesignSystem in Frameworks */,
+				B6B260F42A3618720029368E /* InfrastructureInterface in Frameworks */,
+				B6B260F22A3618720029368E /* ItemsApiClient in Frameworks */,
+				B6B260F62A3618720029368E /* QiitaSearchScreen in Frameworks */,
+				B6B260F02A3618720029368E /* Entity in Frameworks */,
+				B6B260EC2A3618720029368E /* ExtensionCompatible in Frameworks */,
+				B6B260EA2A3618720029368E /* Buildable in Frameworks */,
+				B6B260E62A3618720029368E /* SearchItemsInteractor in Frameworks */,
+				B6B260F82A3618720029368E /* PresentationInterface in Frameworks */,
+				B6B260E82A3618720029368E /* ApplicationInterface in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -123,6 +126,7 @@
 				B6C431D62A34CF4D008F1677 /* Application */,
 				B6C431D72A34CF4D008F1677 /* ApplicationInterface */,
 				B6B260BF2A35CC490029368E /* Core */,
+				B6B260E42A3608E60029368E /* DesignSystem */,
 				B6C431DB2A34CF4D008F1677 /* Entity */,
 				B6C431DC2A34CF4D008F1677 /* Infrastructure */,
 				B6C431D82A34CF4D008F1677 /* InfrastructureInterface */,
@@ -222,15 +226,16 @@
 			);
 			name = Brownie;
 			packageProductDependencies = (
-				B6B260D22A35CFAB0029368E /* SearchItemsInteractor */,
-				B6B260D42A35CFAB0029368E /* ApplicationInterface */,
-				B6B260D62A35CFAB0029368E /* Buildable */,
-				B6B260D82A35CFAB0029368E /* ExtensionCompatible */,
-				B6B260DA2A35CFAB0029368E /* Entity */,
-				B6B260DC2A35CFAB0029368E /* ItemsApiClient */,
-				B6B260DE2A35CFAB0029368E /* InfrastructureInterface */,
-				B6B260E02A35CFAB0029368E /* QiitaSearchScreen */,
-				B6B260E22A35CFAB0029368E /* PresentationInterface */,
+				B6B260E52A3618720029368E /* SearchItemsInteractor */,
+				B6B260E72A3618720029368E /* ApplicationInterface */,
+				B6B260E92A3618720029368E /* Buildable */,
+				B6B260EB2A3618720029368E /* ExtensionCompatible */,
+				B6B260ED2A3618720029368E /* DesignSystem */,
+				B6B260EF2A3618720029368E /* Entity */,
+				B6B260F12A3618720029368E /* ItemsApiClient */,
+				B6B260F32A3618720029368E /* InfrastructureInterface */,
+				B6B260F52A3618720029368E /* QiitaSearchScreen */,
+				B6B260F72A3618720029368E /* PresentationInterface */,
 			);
 			productName = Brownie;
 			productReference = B6C62F8F2A3352CA00735188 /* Brownie.app */;
@@ -708,39 +713,43 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B6B260D22A35CFAB0029368E /* SearchItemsInteractor */ = {
+		B6B260E52A3618720029368E /* SearchItemsInteractor */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = SearchItemsInteractor;
 		};
-		B6B260D42A35CFAB0029368E /* ApplicationInterface */ = {
+		B6B260E72A3618720029368E /* ApplicationInterface */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ApplicationInterface;
 		};
-		B6B260D62A35CFAB0029368E /* Buildable */ = {
+		B6B260E92A3618720029368E /* Buildable */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Buildable;
 		};
-		B6B260D82A35CFAB0029368E /* ExtensionCompatible */ = {
+		B6B260EB2A3618720029368E /* ExtensionCompatible */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ExtensionCompatible;
 		};
-		B6B260DA2A35CFAB0029368E /* Entity */ = {
+		B6B260ED2A3618720029368E /* DesignSystem */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = DesignSystem;
+		};
+		B6B260EF2A3618720029368E /* Entity */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = Entity;
 		};
-		B6B260DC2A35CFAB0029368E /* ItemsApiClient */ = {
+		B6B260F12A3618720029368E /* ItemsApiClient */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = ItemsApiClient;
 		};
-		B6B260DE2A35CFAB0029368E /* InfrastructureInterface */ = {
+		B6B260F32A3618720029368E /* InfrastructureInterface */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = InfrastructureInterface;
 		};
-		B6B260E02A35CFAB0029368E /* QiitaSearchScreen */ = {
+		B6B260F52A3618720029368E /* QiitaSearchScreen */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = QiitaSearchScreen;
 		};
-		B6B260E22A35CFAB0029368E /* PresentationInterface */ = {
+		B6B260F72A3618720029368E /* PresentationInterface */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PresentationInterface;
 		};

@@ -19,6 +19,8 @@ let package = Package(
     dependencies: [
         .package(name: "ApplicationInterface", path: "../ApplicationInterface"),
         .package(name: "Core", path: "../Core"),
+        .package(name: "DesignSystem", path: "../DesignSystem"),
+        .package(name: "Entity", path: "../Entity"),
         .package(name: "PresentationInterface", path: "../PresentationInterface"),
     ],
     targets: [
@@ -28,6 +30,8 @@ let package = Package(
                 "Extensions",
                 .product(name: "ApplicationInterface", package: "ApplicationInterface"),
                 .product(name: "Buildable", package: "Core"),
+                .product(name: "DesignSystem", package: "DesignSystem"),
+                .product(name: "Entity", package: "Entity"),
                 .product(name: "PresentationInterface", package: "PresentationInterface"),
             ]
         ),

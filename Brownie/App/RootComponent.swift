@@ -22,8 +22,8 @@ final class RootComponent: BootstrapComponent {
         return SearchItemsUseCaseComponent(parent: self)
     }
 
-    var qiitaSearchComponent: QiitaSearchComponent {
-        return QiitaSearchComponent(parent: self)
+    var qiitaSearchScreenComponent: QiitaSearchScreenComponent {
+        return QiitaSearchScreenComponent(parent: self)
     }
 
     var searchItemsUseCase: SearchItemsUseCase {
@@ -41,7 +41,7 @@ extension RootComponent {
     }
 }
 
-// MARK: - QiitaSearchDependency
+// MARK: - QiitaSearchScreenDependency
 extension RootComponent {
 
     var qiitaSearchViewData: QiitaSearchViewData {
