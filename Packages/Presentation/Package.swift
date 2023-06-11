@@ -20,16 +20,15 @@ let package = Package(
         .package(name: "ApplicationInterface", path: "../ApplicationInterface"),
         .package(name: "Buildable", path: "../Buildable"),
         .package(name: "PresentationInterface", path: "../PresentationInterface"),
-        .package(url: "https://github.com/uber/needle.git", branch: "master"),
     ],
     targets: [
         .target(
             name: "QiitaSearchScreen",
             dependencies: [
+                "Extensions",
                 .product(name: "ApplicationInterface", package: "ApplicationInterface"),
                 .product(name: "Buildable", package: "Buildable"),
                 .product(name: "PresentationInterface", package: "PresentationInterface"),
-                .product(name: "NeedleFoundation", package: "needle"),
             ]
         ),
         .testTarget(
@@ -37,6 +36,10 @@ let package = Package(
             dependencies: [
                 "QiitaSearchScreen",
             ]
-        )
+        ),
+        .target(
+            name: "Extensions",
+            dependencies: []
+        ),
     ]
 )

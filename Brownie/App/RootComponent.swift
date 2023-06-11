@@ -5,6 +5,7 @@
 //  Created by Yuki Okudera on 2023/06/09.
 //
 
+import ApplicationInterface
 import InfrastructureInterface
 import ItemsApiClient
 import NeedleFoundation
@@ -13,26 +14,48 @@ import SearchItemsInteractor
 
 final class RootComponent: BootstrapComponent {
 
+    var itemsApiRepositoryComponent: ItemsApiRepositoryComponent {
+        return ItemsApiRepositoryComponent(parent: self)
+    }
+
+    var searchItemsUseCaseComponent: SearchItemsUseCaseComponent {
+        return SearchItemsUseCaseComponent(parent: self)
+    }
+
+    var qiitaSearchComponent: QiitaSearchComponent {
+        return QiitaSearchComponent(parent: self)
+    }
+
+    var searchItemsUseCase: SearchItemsUseCase {
+        return searchItemsUseCaseComponent.searchItemsUseCaseBuilder().makeUseCase(itemsApiRepository: self.itemsApiRepository)
+    }
+}
+
+// MARK: - SearchItemsUseCaseDependency
+extension RootComponent {
+
+    var itemsApiRepository: ItemsApiRepository {
+        return shared {
+            itemsApiRepositoryComponent.itemsApiRepositoryBuilder().makeRepository()
+        }
+    }
+}
+
+// MARK: - QiitaSearchDependency
+extension RootComponent {
+
     var qiitaSearchViewData: QiitaSearchViewData {
-        return shared { QiitaSearchViewData() }
+        return shared {
+            QiitaSearchViewData()
+        }
     }
 
     var qiitaSearchPresenterInput: QiitaSearchPresenterInput {
         return shared {
             QiitaSearchPresenter(
                 viewData: qiitaSearchViewData,
-                searchItemsUseCase: SearchItemsInteractor(
-                    repository: itemsApiRepositoryComponent.itemsApiRepositoryBuilder().makeRepository() as! ItemsApiRepository
-                )
+                searchItemsUseCase: searchItemsUseCase
             )
         }
-    }
-
-    var itemsApiRepositoryComponent: ItemsApiRepositoryComponent {
-        return ItemsApiRepositoryComponent(parent: self)
-    }
-
-    var qiitaSearchComponent: QiitaSearchComponent {
-        return QiitaSearchComponent(parent: self)
     }
 }

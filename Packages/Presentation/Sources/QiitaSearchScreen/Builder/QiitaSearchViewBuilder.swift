@@ -5,8 +5,9 @@
 //  Created by Yuki Okudera on 2023/06/10.
 //
 
-import NeedleFoundation
 import Buildable
+import NeedleFoundation
+import PresentationInterface
 import UIKit
 
 final class QiitaSearchViewBuilder: Builder<QiitaSearchDependency>, QiitaSearchViewBuildable {

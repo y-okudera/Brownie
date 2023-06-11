@@ -14,13 +14,13 @@ let package = Package(
             targets: ["PresentationInterface"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/uber/needle.git", branch: "master"),
+        .package(name: "Buildable", path: "../Buildable"),
     ],
     targets: [
         .target(
             name: "PresentationInterface",
             dependencies: [
-                .product(name: "NeedleFoundation", package: "needle"),
+                .product(name: "Buildable", package: "Buildable"),
             ]
         ),
         .testTarget(

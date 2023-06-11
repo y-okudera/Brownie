@@ -11,14 +11,14 @@ import InfrastructureInterface
 
 final class ItemsApiRepositoryBuilder: Builder<EmptyDependency>, ItemsApiRepositoryBuildable {
 
-    func makeRepository() -> some ItemsApiRepository {
+    func makeRepository() -> ItemsApiRepository {
         return ItemsApiClient()
     }
 }
 
 public final class ItemsApiRepositoryComponent: Component<EmptyDependency>, ItemsApiRepositoryBuilderProvider {
 
-    public func itemsApiRepositoryBuilder() -> any ItemsApiRepositoryBuildable {
+    public func itemsApiRepositoryBuilder() -> ItemsApiRepositoryBuildable {
         return ItemsApiRepositoryBuilder(dependency: dependency)
     }
 }
