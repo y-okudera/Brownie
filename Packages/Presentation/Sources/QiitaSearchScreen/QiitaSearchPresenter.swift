@@ -27,5 +27,8 @@ public final class QiitaSearchPresenter: QiitaSearchPresenterInput {
     public func onAppear() async {
         await self.viewData.updateDataList(dataList: ["1", "2", "3"])
         await self.viewData.updateTitle(title: "QiitaSearch")
+        let items = try? await self.searchItemsUseCase.execute(page: 1, perPage: 20, query: "Swift")
+        print("items")
+        dump(items ?? [])
     }
 }

@@ -10,30 +10,32 @@ let package = Package(
     ],
     products: [
         .library(
-            name: "QiitaSearch",
+            name: "QiitaSearchScreen",
             targets: [
-                "QiitaSearch",
+                "QiitaSearchScreen",
             ]
         ),
     ],
     dependencies: [
         .package(name: "ApplicationInterface", path: "../ApplicationInterface"),
+        .package(name: "Buildable", path: "../Buildable"),
         .package(name: "PresentationInterface", path: "../PresentationInterface"),
         .package(url: "https://github.com/uber/needle.git", branch: "master"),
     ],
     targets: [
         .target(
-            name: "QiitaSearch",
+            name: "QiitaSearchScreen",
             dependencies: [
                 .product(name: "ApplicationInterface", package: "ApplicationInterface"),
+                .product(name: "Buildable", package: "Buildable"),
                 .product(name: "PresentationInterface", package: "PresentationInterface"),
                 .product(name: "NeedleFoundation", package: "needle"),
             ]
         ),
         .testTarget(
-            name: "QiitaSearchTests",
+            name: "QiitaSearchScreenTests",
             dependencies: [
-                "QiitaSearch",
+                "QiitaSearchScreen",
             ]
         )
     ]

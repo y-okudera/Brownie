@@ -15,12 +15,14 @@ let package = Package(
     ],
     dependencies: [
         .package(name: "Entity", path: "../Entity"),
+        .package(name: "Buildable", path: "../Buildable"),
     ],
     targets: [
         .target(
             name: "InfrastructureInterface",
             dependencies: [
                 .product(name: "Entity", package: "Entity"),
+                .product(name: "Buildable", package: "Buildable"),
             ]
         ),
         .testTarget(

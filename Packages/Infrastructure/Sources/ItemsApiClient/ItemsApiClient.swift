@@ -6,12 +6,15 @@
 //
 
 import ApiRequester
+import Buildable
 import InfrastructureInterface
 import Foundation
 
-struct ItemsApiClient: ItemsApiRepository {
+public struct ItemsApiClient: ItemsApiRepository {
 
-    func send(page: Int, perPage: Int, query: String) async throws -> ItemsResponse {
+    public init() {}
+
+    public func send(page: Int, perPage: Int, query: String) async throws -> ItemsResponse {
         return try await ApiRequester.request(ItemsRequest(page: page, perPage: perPage, query: query))
     }
 }

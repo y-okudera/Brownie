@@ -15,6 +15,7 @@ let package = Package(
         ),
     ],
     dependencies: [
+        .package(name: "Buildable", path: "../Buildable"),
         .package(name: "Entity", path: "../Entity"),
         .package(name: "InfrastructureInterface", path: "../InfrastructureInterface"),
     ],
@@ -33,6 +34,7 @@ let package = Package(
             name: "ItemsApiClient",
             dependencies: [
                 "ApiRequester",
+                .product(name: "Buildable", package: "Buildable"),
                 .product(name: "Entity", package: "Entity"),
                 .product(name: "InfrastructureInterface", package: "InfrastructureInterface"),
             ]

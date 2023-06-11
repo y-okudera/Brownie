@@ -14,7 +14,7 @@ public struct SearchItemsInteractor: SearchItemsUseCase {
 
     private let repository: ItemsApiRepository
 
-    init (repository: ItemsApiRepository) {
+    public init (repository: ItemsApiRepository) {
         self.repository = repository
     }
 

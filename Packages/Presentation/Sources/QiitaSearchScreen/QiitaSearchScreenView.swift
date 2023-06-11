@@ -39,14 +39,14 @@ struct QiitaSearchScreenView: View {
     }
 }
 
-struct QiitaSearchScreenView_Previews: PreviewProvider {
-    static var previews: some View {
-        QiitaSearchScreenView(
-            presenter: QiitaSearchPresenter(
-                viewData: .init(),
-                searchItemsUseCase: <#SearchItemsUseCase#>
-            ),
-            viewData: .init()
-        )
-    }
-}
+//struct QiitaSearchScreenView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        QiitaSearchScreenView(
+//            presenter: QiitaSearchPresenter(
+//                viewData: .init(),
+//                searchItemsUseCase: 
+//            ),
+//            viewData: .init()
+//        )
+//    }
+//}
