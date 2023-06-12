@@ -6,6 +6,7 @@
 //
 
 import DesignSystem
+import Entity
 import Extensions
 import SwiftUI
 
@@ -13,6 +14,11 @@ protocol QiitaSearchScreenViewDelegate: AnyObject {
     func qiitaSearchScreenView(
         _ qiitaSearchScreenView: QiitaSearchScreenView,
         didSetTitle title: String
+    )
+
+    func qiitaSearchScreenView(
+        _ qiitaSearchScreenView: QiitaSearchScreenView,
+        didSelectItem item: Item
     )
 }
 
@@ -38,10 +44,11 @@ struct QiitaSearchScreenView: View {
             Spacer()
 
             self.content()
-                .when(viewData.items.isEmpty) { _ in
-                    self.viewData.isLoading
-                    ? AnyView(ProgressView())
-                    : AnyView(self.emptyContent())
+                .when(self.viewData.items.isEmpty && self.viewData.isLoading) { _ in
+                    ProgressView()
+                }
+                .when(viewData.items.isEmpty && !self.viewData.isLoading) { _ in
+                    self.emptyContent()
                 }
                 .onAppear {
                     Task { await self.presenter?.onAppear() }
@@ -58,6 +65,9 @@ struct QiitaSearchScreenView: View {
     private func content() -> some View {
         List(self.viewData.items, id: \.self.id) { item in
             Text(item.title)
+                .onTapGesture {
+                    self.delegate?.qiitaSearchScreenView(self, didSelectItem: item)
+                }
                 .onAppear {
                     if self.viewData.items.last == item {
                         print("last item: \(item.title)")

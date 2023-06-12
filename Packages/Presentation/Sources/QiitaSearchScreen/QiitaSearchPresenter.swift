@@ -9,7 +9,7 @@ import ApplicationInterface
 import Foundation
 
 public protocol QiitaSearchPresenterInput {
-    var viewData: QiitaSearchViewData { get }
+    init(viewData: QiitaSearchViewData, searchItemsUseCase: SearchItemsUseCase)
     func onAppear() async
     func searchBarTextDidChange(to searchBarText: String) async
     func performSearch() async

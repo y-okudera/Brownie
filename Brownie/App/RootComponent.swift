@@ -25,10 +25,6 @@ final class RootComponent: BootstrapComponent {
     var qiitaSearchScreenComponent: QiitaSearchScreenComponent {
         return QiitaSearchScreenComponent(parent: self)
     }
-
-    var searchItemsUseCase: SearchItemsUseCase {
-        return searchItemsUseCaseComponent.searchItemsUseCaseBuilder().makeUseCase(itemsApiRepository: self.itemsApiRepository)
-    }
 }
 
 // MARK: - SearchItemsUseCaseDependency
@@ -36,7 +32,7 @@ extension RootComponent {
 
     var itemsApiRepository: ItemsApiRepository {
         return shared {
-            itemsApiRepositoryComponent.itemsApiRepositoryBuilder().makeRepository()
+            self.itemsApiRepositoryComponent.itemsApiRepositoryBuilder().makeRepository()
         }
     }
 }
@@ -44,18 +40,9 @@ extension RootComponent {
 // MARK: - QiitaSearchScreenDependency
 extension RootComponent {
 
-    var qiitaSearchViewData: QiitaSearchViewData {
+    var searchItemsUseCase: SearchItemsUseCase {
         return shared {
-            QiitaSearchViewData()
-        }
-    }
-
-    var qiitaSearchPresenterInput: QiitaSearchPresenterInput {
-        return shared {
-            QiitaSearchPresenter(
-                viewData: qiitaSearchViewData,
-                searchItemsUseCase: searchItemsUseCase
-            )
+            self.searchItemsUseCaseComponent.searchItemsUseCaseBuilder().makeUseCase(itemsApiRepository: self.itemsApiRepository)
         }
     }
 }

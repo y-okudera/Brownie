@@ -5,14 +5,15 @@
 //  Created by Yuki Okudera on 2023/06/10.
 //
 
+import ApplicationInterface
 import Buildable
 import NeedleFoundation
 import PresentationInterface
 import UIKit
 
 public protocol QiitaSearchScreenDependency: Dependency {
-    var qiitaSearchViewData: QiitaSearchViewData { get }
-    var qiitaSearchPresenterInput: QiitaSearchPresenterInput { get }
+    var searchItemsUseCase: SearchItemsUseCase { get }
+    var qiitaSearchScreenComponent: QiitaSearchScreenComponent { get }
 }
 
 public final class QiitaSearchScreenComponent: Component<QiitaSearchScreenDependency>, QiitaSearchScreenBuilderProvider {
@@ -25,9 +26,12 @@ public final class QiitaSearchScreenComponent: Component<QiitaSearchScreenDepend
 private final class QiitaSearchScreenBuilder: Builder<QiitaSearchScreenDependency>, QiitaSearchScreenBuildable {
 
     func makeViewController() -> UIViewController {
+        let viewData = QiitaSearchViewData()
         let vc = QiitaSearchViewController()
-        vc.viewData = dependency.qiitaSearchViewData
-        vc.presenter = dependency.qiitaSearchPresenterInput
+        let presenter = QiitaSearchPresenter(viewData: viewData, searchItemsUseCase: dependency.searchItemsUseCase)
+        vc.viewData = viewData
+        vc.presenter = presenter
+        vc.component = dependency.qiitaSearchScreenComponent
         return vc
     }
 }
