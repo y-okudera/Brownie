@@ -11,18 +11,15 @@ public struct SearchBar: UIViewRepresentable {
 
     @Binding public var searchText: String
     private let placeholder: String?
-    private var textDidChange: ((String) -> Void)?
     private var onSearchButtonClicked: (() -> Void)?
 
     public init(
         searchText: Binding<String>,
         placeholder: String?,
-        textDidChange: ((String) -> Void)?,
         onSearchButtonClicked: (() -> Void)?
     ) {
         self._searchText = searchText
         self.placeholder = placeholder
-        self.textDidChange = textDidChange
         self.onSearchButtonClicked = onSearchButtonClicked
     }
 
@@ -54,7 +51,6 @@ public struct SearchBar: UIViewRepresentable {
 
         public func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             self.searchBar.searchText = searchText
-            self.searchBar.textDidChange?(searchText)
         }
 
         public func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
@@ -66,6 +62,6 @@ public struct SearchBar: UIViewRepresentable {
 
 struct SearchBar_Previews: PreviewProvider {
     static var previews: some View {
-        SearchBar(searchText: .constant("preview"), placeholder: "placeholder", textDidChange: nil, onSearchButtonClicked: nil)
+        SearchBar(searchText: .constant("preview"), placeholder: "placeholder", onSearchButtonClicked: nil)
     }
 }

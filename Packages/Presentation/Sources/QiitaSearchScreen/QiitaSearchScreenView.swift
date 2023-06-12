@@ -24,11 +24,16 @@ struct QiitaSearchScreenView: View {
 
     var body: some View {
         VStack {
-            SearchBar(searchText: self.$viewData.searchBarText, placeholder: "記事検索", textDidChange: { text in
-                Task { await self.presenter?.searchBarTextDidChange(to: text) }
-            }, onSearchButtonClicked: {
-                Task { await self.presenter?.performSearch() }
-            })
+            SearchBar(
+                searchText: Binding(
+                    get: { self.viewData.searchBarText },
+                    set: { text in Task { await self.presenter?.searchBarTextDidChange(to: text) } }
+                ),
+                placeholder: "記事検索",
+                onSearchButtonClicked: {
+                    Task { await self.presenter?.performSearch() }
+                }
+            )
 
             Spacer()
 

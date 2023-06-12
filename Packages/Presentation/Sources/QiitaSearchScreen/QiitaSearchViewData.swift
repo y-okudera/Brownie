@@ -11,8 +11,8 @@ import Foundation
 public actor QiitaSearchViewData: ObservableObject {
 
     @MainActor @Published private(set) var title: String = ""
-    @MainActor @Published var searchBarText: String = ""
-    @MainActor @Published var searchedText: String = ""
+    @MainActor @Published private(set) var searchBarText: String = ""
+    @MainActor @Published private(set) var searchedText: String = ""
     @MainActor @Published private(set) var isLoading: Bool = false
     @MainActor @Published private(set) var items: [Item] = []
     @MainActor private(set) var page: Int = 1
